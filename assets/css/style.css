@@ -350,6 +350,64 @@ h2{
   margin-bottom: 0.5rem;
   color: #2c3e50;
 }
+.heading{
+  text-align:center;
+  margin-bottom: 3rem ;
+}
+.heading span{
+  font-family:'Playfair Display',serif; 
+  font-size: 2rem;
+  background: rgba(3,96,251,0.3) ;
+  color:orange;
+  border-radius: 0.3rem;
+  padding:.5rem .5rem; 
+}
+h2{
+  font-size: 1.8rem;       
+  color: #0077b6;          
+  font-weight: 600;        
+  font-family: 'Playfair Display',serif; 
+  text-align: center;     
+  letter-spacing: 1.2px; 
+  margin-bottom: 30px;
+}
+/* Conteneur principal */
+.Réservation .rangs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+/* Image du voyageur */
+.Réservation .image {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+.Réservation .image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+/* Formulaire */
+.Réservation form {
+  flex: 1 1 400px;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+/* Champs */
+.Réservation form .inputBox {
+  margin-bottom: 1.5rem;
+}
+.Réservation form h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
 .Réservation form input[type="text"],
 .Réservation form input[type="number"],
 .Réservation form input[type="date"] {
@@ -363,6 +421,42 @@ h2{
 .Réservation form input:focus {
   outline: none;
   border-color: #3498db;
+}
+/* textarea message */
+#message {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+ #message {
+  outline: none;
+  border-color: #3498db;
+}
+.btn {
+  background-color: #3498db; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  font-weight: bold; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+.btn:hover {
+  background-color:orange; 
+  transform: scale(1.05); 
+}
+.btn:active {
+  transform: scale(0.97); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 /* textarea message */
 #message {
@@ -531,7 +625,13 @@ h2{
   color:#eee;
   padding: .5rem 0;
   
-} 
+}
+
+
+
+
+
+  
 /*section Clients*/
 .clients {
   padding: 3rem 1rem;
