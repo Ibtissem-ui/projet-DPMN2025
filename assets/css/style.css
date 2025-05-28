@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  margin: 2px;
-  padding: 2px;
+  margin: 0px;
+  padding: 0px;
   overflow-x: hidden;  
 }
 header {
@@ -14,7 +14,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  margin: 2px;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
@@ -531,6 +530,7 @@ h2{
   font-size: 1.5rem;
   color:#eee;
   padding: .5rem 0;
+  
 } 
 /*section Clients*/
 .clients {
@@ -738,7 +738,7 @@ footer {
 
 /*media queries*/
 
-@media (max-width: 1040px) {
+@media (max-width: 1024px) {
 
    header {
   position: fixed;
@@ -799,12 +799,35 @@ footer {
   border-radius: 0.5rem;
   padding: 0.4rem .8rem;
   }
-}
+
   /*section clients*/
   .card {
     width: calc(100% / 2 - 16px);
   }
+  /*section services*/
+  .services .box-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.services .box-container .box i{
+  padding:1rem;
+  font-size: 2rem;
   
+}
+.services .box-container .box h3{
+  font-size: 1rem;
+  
+}
+.services .box-container .box p{
+  font-size: .8rem;
+  
+}
+
+
+
+
+
+  }
   @media (max-width: 768px) {
 
   header {
@@ -929,15 +952,13 @@ footer {
   gap: 15px;
   }
  /* section services*/
+  .services .box-container{
+  grid-template-columns: 1fr;
+  }
   .services .box-container .box i{
-  font-size: 2rem;
+  font-size: 1.5rem;
   }
-  .services .box-container .box h3{
-  font-size: 1.5rem;  
-  }
-  .services .box-container .box p{
-  font-size: 1.rem;
- }
+ 
   /*section galerie*/
   .Galerie .box-container {
     flex-direction: column;
