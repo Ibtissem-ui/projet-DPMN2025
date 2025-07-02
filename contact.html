@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famille Autisme</title>
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <script src="assets/js/javascript.js"  defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <h2 class="header-content">Contact</h2>
+</header>
+<main>
+  <h2>Pour plus d'information, veuillez nous contacter.</h2>
+
+  <ul class="contact-wrapper">
+    <!-- Image -->
+    <li class="contact-image">
+      <img src="assets/image/autisme _mains.jpg" alt="Image contact">
+    </li>
+
+    <!-- Formulaire -->
+    <li class="container">
+      <form id="ContactForm">
+        <label for="name">Nom</label>
+        <input type="text" id="name" placeholder="Nom" required>
+
+        <label for="firstName">Prénom</label>
+        <input type="text" id="firstName" placeholder="Prénom" required>
+
+        <label for="email">Adresse e-mail</label>
+        <input type="text" id="email" placeholder="email@domaine.com" required>
+
+        <label for="phone">Numéro de téléphone</label>
+        <div class="flag">
+          <img src="https://flagcdn.com/w40/fr.png" alt="france">
+          <input type="tel" id="phone" placeholder="+33" required>
+        </div>
+
+        <label for="subject">Sujet du message</label>
+        <select id="subject" required>
+          <option value="">Sélectionner</option>
+          <option>Demande d'information</option>
+          <option>Suggestion</option>
+          <option>Réclamation</option>
+          <option>Signaler une erreur</option>
+          <option>Autre</option>
+        </select>
+
+        <label for="message">Message</label>
+         <textarea id="message" placeholder="Votre message..." rows="6" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </li>
+  </ul>
+
+  <!-- Bouton de retour à l'accueil -->
+  <div class="back-home">
+    <a href="index.html" class="btn-home">← Retour à l'accueil</a>
+  </div>
+</main>
+
+
+<footer>
+ <div class="footer-container">
+    <!-- Menu -->
+    <div class="footer-column">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#Accueil">Accueil</a></li>
+        <li><a href="#À propos">À propos</a></li>
+        <li><a href="#Échange">Échange</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div class="footer-column">
+      <h3>Suivez-nous</h3>
+      <div class="social-icons">
+        <a href="https://facebook.com"target="_blank" ><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"target="_blank" ><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <button>Contactez-nous</button>
+    </div> 
+   
+    <!-- Contact -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p><i class="fas fa-phone"></i> +33 0000000000</p>
+      <p><i class="fas fa-envelope"></i> autismefamille@gmail.com</p>
+    
+    </div>
+  </div>
+
+  <!-- Mentions légales -->
+  <div class="legal">
+    <a href="mentionlegales.html">Mentions légales</a>
+  </div>
+</footer>
+
+
+
+</body>

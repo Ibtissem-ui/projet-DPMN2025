@@ -3,581 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Évasion Voyage</title>
+  <title>Famille Autisme</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/javascript.js"></script>
+  <script src="assets/js/javascript.js"  defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
 
-  <header>
+<header>
+
  <div id="menu-bar" class="fas fa-bars"></div>
 
-  <!--logo-->
     <div id="logo" class="logo">
       <div class="mot1">
-        ÉVASION
-        <div class="plane-container">
-          <div class="plane">&#9992</div>
-        </div>
+       Famille 
       </div>
-      <div class="mot2">VOYAGE</div>
+      <div class="mot2">Autisme</div>
     </div>
   <!--navbar-->
-  <nav class="navbar">
-    <a href="#Accueil">Accueil</a>
-    <a href="#Réservation">Réservation</a>
-    <a href="#Offres">Offres</a>
-    <a href="#services">Services</a>
-    <a href="#Galerie">Galerie</a>
-    <a href="#Clients">Clients</a>
-    <a href="#contact">Contact</a>
-  </nav>
+       <nav class="navbar">
+
+         <ul class="menu">
+
+          <li><a href="#Accueil">Accueil</a></li>
+
+           <li class="has-submenu ">
+            <a href="#" id="toggle-submenu">À propos</a>
+             <ul class="submenu">
+              <li><a href="qui-sommes-nous.html"><i class="fas fa-chevron-right"></i>Qui-sommes-nous ?</a></li>
+              <li><a href="lautisme.html"><i class="fas fa-chevron-right"></i>Qu'est-ce que l'autisme ?</a></li>
+             </ul>
+             </li> 
+             <li><a href="echange.html">Échange</a></li>
+             <li><a href="contact.html">Contact</a></li>
+         </ul>
+       </nav>
 
   <div class="icons">
-    <i class="fas fa-search" id="search-btn"></i>
-     <i class="fas fa-user"  id="login-btn"></i>
+      <i class="fas fa-search" id="search-btn"></i> 
+       
+        <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here..." >
+         <label for="search-bar" class="fas fa-search"></label>
+       </form>
+
+  <div class="formulaire-connexion">
+      <i class="fas fa-times" id="form-close"></i>
+
+        <form action="">
+
+        <h3>Connexion</h3>
+
+         <input type="email" class="box" placeholder="Saisissez votre adresse e-mail" required>
+         <input type="password" class="box" placeholder="Saisissez votre mot de passe" required>
+         <input type="submit" value="Se connecter" class="btn">
+
+          <p>Mot de passe oublié ? <a href="#">Cliquez ici</a></p>
+          <p>Pas encore de compte ? <a href="#">Inscrivez-vous</a></p>
+        </form>
   </div>
 
-  <form action="" class="search-bar-container">
-    <input type="search" id="search-bar" placeholder="search here..." >
-     <label for="search-bar" class="fas fa-search"></label>
-   </form>
+</header> 
 
- <div class="formulaire-connexion">
-  <i class="fas fa-times" id="form-close"></i>
+<main>
 
-  <form action="">
-    <h3>Connexion</h3>
+  <!--icône des paramètre-->
+        <div class="acces-settings">
+         <i class="fas fa-cog" id="openSettings"></i>
+          <div class="settings-menu"id="settingMenu">
+           <i class="fas fa-times close-btn" id="closeSettings"></i>
+            <button id="increaseFont"><i class="fas fa-plus"></i>Agrandir</button>
+            <button id="decreaseFont"><i class="fas fa-minus"></i>Réduire</button>
+            <button id="toggleGraymode"><i class="fas fa-adjust"></i>mode gris</button>
+          </div> 
+        </div>
 
-    <input type="email" class="box" placeholder="Saisissez votre adresse e-mail" required>
-    <input type="password" class="box" placeholder="Saisissez votre mot de passe" required>
-    <input type="submit" value="Se connecter" class="btn">
+  <!-- Section home -->
 
-    <p>Mot de passe oublié ? <a href="#">Cliquez ici</a></p>
-    <p>Pas encore de compte ? <a href="#">Inscrivez-vous</a></p>
-  </form>
-</div>
- 
-  </header>
-<!--section home-->
-<section class="home"  id="Accueil">
-  <video class="video-slide active" src="assets/image/plage.mp4" autoplay muted loop playsinline></video>
-  <video class="video-slide" src="assets/image/sahara.mp4" autoplay muted loop playsinline></video>
-  <video class="video-slide" src="assets/image/montagne.mp4" autoplay muted loop playsinline></video>
-  <video class="video-slide" src="assets/image/city.mp4" autoplay muted loop playsinline></video>  
-  
-  <div class="content active">
-    <h1>ÉVASION VOYAGE<br><span>Plage</span></h1>
-     <p>Profitez d'un séjour inoubliable sur des plages de rêve aux eaux cristallines et au sable doré.</p>
+<section class="home glass">
+  <button class="prev">&#10094;</button>
+
+  <div class="image-slide active">
+    <img src="assets/image/fleur bleu.jpg" alt="autisme">
+    <div class="content active">
+      <h1>Famille AUTISME</h1>
+      <p>Notre chemin n'est pas facile, mais il est rempli d'espoir.</p>
+      <a href="#" class="btn openLoginForm">Rejoignez-nous</a>
     </div>
-    
-    <div class="content">
-      <h1>ÉVASION VOYAGE<br><span>Sahara</span></h1>
-       <p>Explorez l'immensité du désert...</p>
   </div>
-  <div class="content">
-    <h1>ÉVASION VOYAGE<br><span>Montagne</span></h1>
-     <p>Respirez l'air pur et partez à l'assaut des sommets...</p>
+
+  <div class="image-slide">
+    <img src="assets/image/avocat (1).jpg" alt="autisme">
+    <div class="content ">
+      <h1>Famille AUTISME</h1>
+      <p>Nous sommes leur famille, alors nous accueillons leurs différences avec amour.</p>
+      <a href="#" class="btn openLoginForm">Rejoignez-nous</a>
+    </div>
   </div>
-  <div class="content">
-    <h1>ÉVASION VOYAGE<br><span>Ville</span></h1>
-     <p>Découvrez les plus belles villes du monde...</p>
-  </div>
-  
-  <div class="slider-navigation">
-    <div class="nav-btn active"></div>
-     <div class="nav-btn"></div>
-      <div class="nav-btn"></div>
-       <div class="nav-btn"></div>
-  </div>
+
+     <button class="next">&#10095;</button>
 </section>
-<!--section réservation-->
-<section class="Réservation" id="Réservation">
-  <h1 class="heading">
-    <span>P</span>
-    <span>L</span>
-    <span>A</span>
-    <span>N</span>
-    <span>&</span>
-    <span>R</span>
-    <span>É</span>
-    <span>S</span>
-    <span>E</span>
-    <span>R</span>
-    <span>V</span>
-    <span>E</span>
-    <span>R</span>
-  </h1>
-  <h2>Planifiez votre voyage et réservez maintenant</h2>
-  <div class="rangs">
-    <div class="image">
-      <img src="assets/image/voyage.jpg" alt="voyage">
-    </div>
 
-    <form action="">
-      <div class="inputBox">
-        <h3>Où aller</h3>
-         <input type="text" placeholder="Destination">
-      </div>
-      <div class="inputBox">
-        <h3>Combien ?</h3>
-         <input type="number" placeholder="Nombre de personnes">
-      </div>
-      <div class="inputBox">
-        <h3>Arrivée</h3>
-         <input type="date">
-      </div>
-      <div class="inputBox">
-        <h3>Départ</h3>
-        <input type="date">
-      </div>
-      <div class="inputBox">
-        <h3>Message</h3>
-     <textarea id="message" name="message" rows="4"></textarea>
-      </div>
-      <button type="button" class="btn">Envoyer</button>
-    </form>
-  </div>
-</section>
-<!--section offres-->
- <section class="Offres" id="Offres">
- <h1 class="heading">
-    <span>O</span>
-    <span>F</span>
-    <span>F</span>
-    <span>R</span>
-    <span>E</span>
-    <span>S</span>
-  </h1>
-<div class="box-wrapper"> 
-  <div class="box-container">
-    <img src="assets/image/mumbai (2).jpg" alt="image">
-      <h3><i class="fas fa-map-marker-alt"></i> Mumbai,inde</h3>
-       <p> Évasion à Mumbai : 7 nuits dans un hôtel 4★ pour 2 adultes. Petit-déjeuner inclus. Plages, culture et aventure vous attendent !</p>
-        <div class="stars">
-         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-       <div class="price">€1100 <span>€1300</span></div>
-        <a href="#Réservation" class="btn">Réserver</a>
-    </div>
+<!--section Evènement-->
+<section class="evenement-section">
 
-    <div class="box-container">
-      <img src="assets/image/greece.jpg" alt="image">
-      <h3><i class="fas fa-map-marker-alt"></i> Thera,Greece</h3>
-      <p> Partez à Théra, Grèce : 6 nuits pour 2 adultes dans un hôtel 4★. Admirez des couchers de soleil à couper le souffle, flânez dans les ruelles blanches et profitez de la mer Égée dans un cadre idyllique.</p>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-      <div class="price">€800 <span>€1000</span></div>
-      <a href="#Réservation" class="btn">Réserver</a>
-    </div>
+   <div class="corner corner-top-left"></div>
+   <div class="corner corner-top-right"></div>
 
-<div class="box-container">
-      <img src="assets/image/EGYPTE.jpg" alt="image">
-      <h3><i class="fas fa-map-marker-alt"></i> Gizeh,Egypte</h3>
-      <p>Explorez Gizeh, Égypte : 5 nuits pour 2 adultes dans un hôtel 4★. Découvrez les majestueuses pyramides, visitez le Sphinx et plongez dans l’histoire fascinante de l’Égypte ancienne.
 
-</p>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-      <div class="price">€1199 <span>€1300</span></div>
-      <a href="#Réservation" class="btn">Réserver</a>
-    </div>
-
-<div class="box-container">
-      <img src="assets/image/TOKYO.jpg" alt="image">
-      <h3><i class="fas fa-map-marker-alt"></i> TOKYO,Japan</h3>
-      <p>Partez à Tokyo, Japon : 6 nuits pour 2 adultes dans un hôtel 4★. Découvrez la fusion unique entre traditions ancestrales et modernité, des temples paisibles aux quartiers animés comme Shibuya et Akihabara.</p>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-      <div class="price">€1500 <span>€1800</span></div>
-      <a href="#Réservation" class="btn">Réserver</a>
-    </div>
-
-<div class="box-container">
-      <img src="assets/image/honolulu.jpg" alt="image">
-          <h3><i class="fas fa-map-marker-alt"></i> honolulu,HawaÏ</h3>
-      <p>Découvrez Honolulu, Hawaï : 7 nuits pour 2 adultes dans un hôtel 4★. Profitez des plages paradisiaques, du surf légendaire et d'une ambiance tropicale unique.</p>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-      <div class="price">€1000 <span>€1100</span></div>
-      <a href="#Réservation" class="btn">Réserver</a>
-    </div>
-
-   <div class="box-container">
-      <img src="assets/image/canda.jpg" alt="image">
-      <h3><i class="fas fa-map-marker-alt"></i> Niagara Falls,Canada</h3>
-      <p> Explorez Niagara Falls : 4 nuits pour 2 adultes dans un hôtel 3★. Admirez les célèbres chutes d'eau, baladez-vous en bateau et profitez d'une nature spectaculaire.</p>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-      </div>
-      <div class="price">€1300 <span>€1500</span></div>
-      <a href="#Réservation" class="btn">Réserver</a>
-    </div>
-</section>
-<!--section service-->
-<section class="services" id="services">
-   <h1 class="heading">
-    <span>S</span>
-    <span>E</span>
-    <span>R</span>
-    <span>V</span>
-    <span>I</span>
-    <span>C</span>
-    <span>E</span>
-    <span>S</span>
-   </h1>
-   <div class="box-container">
-
- <div class="box">
-      <i class="fas fa-hotel"></i>
-      <h3>Hôtels abordables</h3>
-      <p> Notre agence de voyage vous aide à trouver les meilleurs hôtels abordables, alliant confort et qualité, pour que votre séjour soit à la fois agréable et économique. Nous sélectionnons soigneusement des hébergements adaptés à tous les budgets, afin de vous offrir une expérience de voyage sans compromis. </p>
-    </div>
-
- <div class="box">
-      <i class="fas fa-utensils"></i>
-      <h3>Restaurants</h3>
-      <p>Notre agence de voyage vous aide à découvrir les meilleurs restaurants abordables, offrant des plats savoureux et de haute qualité, pour que vous profitiez d’une expérience culinaire agréable adaptée à tous les budgets. Nous sélectionnons soigneusement des restaurants qui conviennent à tous les goûts, afin de vous garantir une expérience gastronomique inoubliable.</p>
-    </div>
-
- <div class="box">
-      <i class="fas fa-bullhorn"></i>
-      <h3>Guide de sécurité</h3>
-      <p>Notre agence de voyage vous accompagne avec un guide de sécurité complet, pour assurer votre tranquillité d’esprit tout au long de votre séjour. Nous vous fournissons des conseils pratiques et personnalisés, adaptés à chaque destination, afin que votre voyage soit sûr et serein. </p>
-    </div>
-
-<div class="box">
-      <i class="fas fa-globe-asia"></i>
-      <h3>Voyages autour de monde</h3>
-      <p> Notre agence vous ouvre les portes du monde en organisant des voyages inoubliables aux quatre coins de la planète. Que vous rêviez de plages exotiques, de villes vibrantes ou de paysages naturels à couper le souffle, nous vous aidons à construire l'aventure de vos rêves, en toute sérénité</p>
-    </div>
-
-<div class="box">
-      <i class="fas fa-plane"></i>
-      <h3>Voyage rapide</h3>
-      <p>Vous avez peu de temps mais envie de vous évader ? Notre agence propose des voyages rapides et bien organisés pour vous permettre de profiter au maximum, même en quelques jours. Idéal pour une escapade de week-end ou une courte pause bien méritée.</p>
-    </div>
-
-<div class="box">
-      <i class="fas fa-hiking"></i>
-      <h3>Aventure</h3>
-      <p>Pour les amateurs de sensations fortes et de découvertes, notre agence propose des voyages d'aventure uniques. Randonnées, excursions en pleine nature, activités extrêmes… vivez une expérience authentique et palpitante, hors des sentiers battus.</p>
-    </div> 
-
-  <div class="box">
-      <i class="fas fa-car"></i>
-      <h3>Location de voiture </h3>
-      <p>Louez facilement un véhicule adapté à vos besoins avec Évasion Voyage et profitez de déplacements confortables, que ce soit pour le travail, la famille ou le loisir.</p>
-    </div>   
-    
-<div class="box">
-      <i class="fas fa-file-signature"></i>
-      <h3>Service de Visa</h3>
-      <p>Avec Évasion Voyage, obtenez votre visa facilement grâce à un accompagnement rapide, fiable et personnalisé pour toutes vos destinations.</p>
-    </div> 
-    </div>
-</section>
-<!--section galerie -->
-<section class="Galerie" id="Galerie">
-  <h1 class="heading">
-    <span>G</span>
-    <span>A</span>
-    <span>L</span>
-    <span>E</span>
-    <span>R</span>
-    <span>I</span>
-    <span>E</span>
-   </h1>
-<div class="box-container">
-
-  <div class="box">
-    <img src="assets/image/famille.jpg" alt="voyage en famille">
-     <div class="element">
-      <h3>Voyage en Famille</h3>
-      <p>Voyages familiaux adaptés à tous les âges, combinant loisirs, confort et souvenirs inoubliables. </p>
-      <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-<div class="box">
-    <img src="assets/image/groupe.jpg" alt="groupe">
-      <div class="element">
-      <h3>Voyage en groupe</h3>
-      <p>Voyagez ensemble et vivez des moments uniques en groupe, dans une ambiance conviviale et bien organisée. </p>
-      <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-<div class="box">
-    <img src="assets/image/camping.jpg" alt="camping">
-      <div class="element">
-      <h3>Voyage en Camping</h3>
-      <p>Séjours en pleine nature, ambiance conviviale et nuits à la belle étoile : vivez l'expérience camping autrement.</p>
-      <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-<div class="box">
-    <img src="assets/image/ski.jpg" alt="le ski">
-     <div class="element">
-       <h3>Voyage au Ski</h3>
-        <p>Plongez dans l'aventure hivernale : ski, neige, sensations fortes et détente au cœur des montagnes. </p>
-         <a href="#" class="btn">Voir plus</a>
-    </div>
-  </div>
-<div class="box">
-    <img src="assets/image/camel11 (1).jpg" alt="sahara">
-    <div class="element">
-      <h3>Voyage dans le Sahara</h3>
-       <p>Aventure au cœur du désert : dunes, chameaux et magie du Sahara sous un ciel étoilé </p>
-        <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-<div class="box">
-    <img src="assets/image/safari.jpg" alt="safari">
-     <div class="element">
-      <h3>Voyage en Safari</h3>
-       <p> Safari unique, vivez la magie de la nature sauvage et approchez les animaux en toute sécurité.</p>
-      <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-
-<div class="box">
-    <img src="assets/image/mongolphiere.jpg" alt="aventure">
-      <div class="element">
-       <h3>Voyage d'Aventure</h3>
-        <p>Explorez l'inconnu, repoussez vos limites et vivez une aventure intense au cœur de la nature.</p>
-      <a href="#" class="btn">Voir plus</a>
-  </div>
-</div>
-
-<div class="box">
-    <img src="assets/image/plage.jpg" alt="Plage">
-     <div class="element">
-       <h3>Voyage à la Plage </h3>
-        <p>Farniente au bord de l'eau : sable, soleil et mer pour des souvenirs en toute sérénité.</p>
-         <a href="#" class="btn">Voir plus</a>
-  </div>
-  </div>
-
-<div class="box">
-    <img src="assets/image/escalade.jpg" alt="Escalade">
-     <div class="element">
-       <h3>Escalade </h3>
-        <p>Escalade encadrée en pleine nature, accessible à tous et riche en sensations.</p>
-         <a href="#" class="btn">Voir plus</a>
-  </div>
-  </div>
-
-<div class="box">
-    <img src="assets/image/croisière.jpg" alt="croisière">
-     <div class="element">
-       <h3>Croisière </h3>
-        <p>Croisière détente et découverte, confort et paysages magnifiques au rendez-vous.</p>
-         <a href="#" class="btn">Voir plus</a>
-  </div>
-  </div>
-
-<div class="box">
-    <img src="assets/image/Evenement.jpg" alt="Évènement">
-     <div class="element">
-       <h3>Évènement</h3>
-        <p>Échanges enrichissants et belles rencontres, partage et convivialité au rendez-vous.</p>
-         <a href="#" class="btn">Voir plus</a>
-  </div>
-  </div>
-
-<div class="box">
-    <img src="assets/image/monuments.jpg" alt="Monument">
-     <div class="element">
-       <h3>Monuments   </h3>
-        <p>Découvrez des monuments magnifiques et vivez un voyage culturel riche en émotions.</p>
-         <a href="#" class="btn">Voir plus</a>
-     </div>
-   </div>
- </div>
- 
-</section>
-<!-- section clients -->
- <section class="Clients" id="Clients">
-    <h1 class="heading">
-    <span>C</span>
-    <span>L</span>
-    <span>I</span>
-    <span>E</span>
-    <span>N</span>
-    <span>T</span>
-    <span>S</span> 
-  </h1>
-  <h2>Ce que disent nos clients </h2>
-
-  <div class="slider-container">
-    <button class="prev">&#10094;</button>
-    <div class="slider-track">
-      <div class="card">
-        <img src="assets/image/v-dame.jpg" alt="">
-        <h3>Isabelle</h3>
-        <p>Dormir sous les étoiles dans le désert, une vraie aventure !</p>
-      <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/image/asia-femme.jpg" alt="">
-        <h3>Margot</h3>
-        <p>Mon premier trek en montagne, des paysages incroyables !</p>
-       <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/image/f-brunne.jpg" alt="">
-        <h3>Juliette</h3>
-        <p>Plage, soleil et repos total grâce à l'agence. Merci !</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-      </div>
-      </div>
-      <div class="card">
-        <img src="assets/image/j-garçon.jpg" alt="">
-        <h3>Noah</h3>
-        <p>Voyager avec des amis, une expérience inoubliable !</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-      </div>
-      <div class="card">  
-        <img src="assets/image/jentel-h.jpg" alt="">
-        <h3>Maxime</h3>
-        <p>Hôtel parfait, abordable et confortable. Je recommande !</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-        </div>
-      <div class="card">
-        <img src="assets/image/h-biry.jpg" alt="">
-        <h3>Hugo</h3>
-        <p>Voyage en famille, tout le monde a adoré !</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-        </div>
-      <div class="card">
-        <img src="assets/image/f-blande.jpg" alt="">
-        <h3>Suzanne</h3>
-        <p>Visite de monuments historiques fascinants, guide passionné.</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-      </div>
-    </div>
-    <div class="card">
-        <img src="assets/image/j-garçon-lunette.jpg" alt="">
-        <h3>Léo</h3>
-        <p>Voir les animaux de si près dans leur habitat naturel, c'était impressionnant.</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-      </div>
-    </div>
-    <div class="card">
-        <img src="assets/image/f-soriante.jpg" alt="">
-        <h3>Monique</h3>
-        <p>"J'avais peu de temps, mais l'agence a tout géré ! En 3 jours j'ai pu bien profiter sans stress. Parfait pour une escapade express."</p>
-        <div class="stars">
-         <i class="fas fa-star"></i> 
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="fas fa-star"></i>
-         <i class="far fa-star"></i>
-        </div>
-      </div>
-  </div>
-    <button class="next">&#10095;</button>
-  </div>
-</section>
-<!--section contact-->
-<section class="contact" id="contact">
-  <h1 class="heading">
-    <span>C</span>
-    <span>O</span>
-    <span>N</span>
-    <span>T</span>
-    <span>A</span>
-    <span>C</span>
-    <span>T</span>
-  </h1>
-<div class ="row">
-  <div class="image">
-    <img src="assets/image/avion.jpg" alt="contact">
-  </div>
-  <form action="">
-    <div class="inputBox">
+     <h2>Évènements à venir</h2>
+<!--event1-->
+<div class="event-container">
+  <div class="card">
+    <h3>Atelier sensoriel pour enfants</h3>
+      <p><strong><i class="fa-solid fa-calendar-days"></i> Date :</strong> 19 juillet 2025</p>
+      <p><strong><i class="fa-solid fa-location-dot"></i> Lieu :</strong> Centre Autisme Strasbourg</p>
+      <p><strong><i class="fa-solid fa-euro-sign"></i> Coût :</strong> <span class="Gratuit">Gratuit</span></p>
+      <p><strong><i class="fa-solid fa-chair"></i> Capacité :</strong> <strong>30</strong> places disponibles</p>
+      <p>Atelier de découverte des textures et des couleurs.</p>
       
-    <input type="text" placeholder="nom">
-    <input type="text" placeholder="prénom">
-    <input type="text" placeholder="adresse">
-    <input type="email"  placeholder="e-mail">
+<!-- Bouton pour afficher le formulaire -->
+      <button class="show-form-btn">En savoir plus</button>
+
+<!-- formulaire caché -->
+      <form class="event-form hidden">
+        <h4>Inscription à l'évènement</h4>
+
+<!-- Bouton pour fermer le formulaire -->
+        <button type="button" class="close-form-btn close-form">x</button>
+
+        <input type="text" name="parent" placeholder="Nom du parent" required>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="text" name="child" placeholder="Nom de l'enfant (optionnel)">
+
+
+        <select name="event" class="event-select">
+        <option value="" disabled selected>Choisir une activité</option>
+        <option value="peinture" data-places="15">Atelier de peinture au doigt</option>
+        <option value="lego" data-places="15">Atelier LEGO ou jeux de construction</option>
+        </select>
+        <p class="places-restantes">Places restantes : <span class="nb-places">—</span></p>
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
-    <div class="inputBox">
-      <input type="numéro" placeholder="numéro de téléphone">
-      <input type="text" placeholder="sujet">
+
+<!--2eme event-->
+
+<div class="event-container">
+    <div class="card">
+      <h3>Atelier sensoriel pour enfants</h3>
+      <p><strong><i class="fa-solid fa-calendar-days"></i> Date :</strong> 26 juillet 2025</p>
+      <p><strong><i class="fa-solid fa-location-dot"></i> Lieu :</strong> Centre le Vaisseau Strasbourg</p>
+      <p><strong><i class="fa-solid fa-euro-sign"></i> Coût :</strong> <span class="Gratuit">Gratuit</span></p>
+      <p><strong><i class="fa-solid fa-chair"></i> Capacité :</strong> <strong>30</strong> places disponibles</p>
+      <p>Un moment calme avec un Spectacle de marionnettes et un mini parc sensoriel à explorer</p>
+      
+<!-- Bouton pour afficher le formulaire -->
+      <button class="show-form-btn">En savoir plus</button>
+
+<!-- formulaire caché -->
+      <form class="event-form hidden">
+      <h4>Inscription à l'évènement</h4>
+
+<!-- Bouton pour fermer le formulaire -->
+      <button type="button" class="close-form-btn close-form">x</button>
+
+        <input type="text" name="parent" placeholder="Nom du parent" required>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="text" name="child" placeholder="Nom de l'enfant (optionnel)">
+
+
+        <select name="event" class="event-select">
+        <option value="" disabled selected>Choisir une activité</option>
+        <option value="peinture" data-places="15">Spectacle de marionnettes calme</option>
+        <option value="lego" data-places="15">Mini parc sensoriel</option>
+        </select>
+
+        <p class="places-restantes">Places restantes : <span class="nb-places">—</span></p>
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
-    <textarea placeholder="message" nom ="" id="" cols="30" rows="10"></textarea>
-    <input type="submit" value="Envoyer message" class="btn">
-  </form>
- </section>
+<!--3eme event-->
+
+<div class="event-container">
+    <div class="card">
+      <h3>Atelier sensoriel pour enfants</h3>
+      <p><strong><i class="fa-solid fa-calendar-days"></i> Date :</strong> 2 Août2025</p>
+      <p><strong><i class="fa-solid fa-location-dot"></i> Lieu :</strong> Association Aspies& Cie Strasbourg</p>
+      <p><strong><i class="fa-solid fa-euro-sign"></i> Coût :</strong> <span class="Gratuit">Gratuit</span></p>
+      <p><strong><i class="fa-solid fa-chair"></i> Capacité :</strong> <strong>30</strong> places disponibles</p>
+      <p>Bien-être du corps et de l'esprit, Activité physique douce suivie d'un temps d'échange entre parents.</p>
+      
+      
+      <!-- Bouton pour afficher le formulaire -->
+      <button class="show-form-btn">En savoir plus</button>
+
+      <!-- formulaire caché -->
+      <form class="event-form hidden">
+        <h4>Inscription à l'évènement</h4>
+
+        <!-- Bouton pour fermer le formulaire -->
+        <button type="button" class="close-form-btn close-form">x</button>
+
+        <input type="text" name="parent" placeholder="Nom du parent" required>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="text" name="child" placeholder="Nom de l'enfant (optionnel)">
+        
+
+        <select name="event" class="event-select">
+        <option value="" disabled selected>Choisir une activité</option>
+        <option value="peinture" data-places="15">Spectacle de marionnettes calme</option>
+        <option value="lego" data-places="15">Mini parc sensoriel</option>
+        </select>
+
+        <p class="places-restantes">Places restantes : <span class="nb-places">—</span></p>
+        <button type="submit">Envoyer</button>
+      </form>
+   </div>
+</div>
+</section>
+
+</main>
+
  <footer>
  <div class="footer-container">
-
-    <!-- Menu -->
+<!-- Menu -->
     <div class="footer-column">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="#Accueil">Accueil </a></li>
-        <li><a href="#Réservation">Réservation</a></li>
-        <li><a href="#Offres">Offres</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#Galerie">Galerie</a></li>
-        <li><a href="#Clients">Clients</a></li>
+        <li><a href="#Accueil">Accueil</a></li>
+        <li><a href="#À propos">À propos</a></li>
+        <li><a href="#Échange">Échange</a></li>
         <li><a href="#Contact">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Réseaux sociaux -->
+<!-- Réseaux sociaux -->
     <div class="footer-column">
       <h3>Suivez-nous</h3>
       <div class="social-icons">
@@ -587,32 +249,22 @@
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <button>Contactez-nous</button>
-    </div>
-
-    <!-- Informations -->
-    <div class="footer-column">
-      <h3>Informations</h3>
-      <p><strong>200</strong> compagnies aériennes partenaires</p>
-      <p><strong>8000</strong> Séjours, circuits et locations</p>
-      <p><strong>650</strong> Hôtels dans notre catalogue</p>
-      <p><strong>180</strong> activités </p>
-      <p><strong>120</strong> loueurs de voiture</p>
-    </div>
-
-    <!-- Contact -->
+    </div> 
+   
+<!-- Contact -->
     <div class="footer-column">
       <h3>Contact</h3>
       <p><i class="fas fa-phone"></i> +33 0000000000</p>
-      <p><i class="fas fa-envelope"></i> evasionvoyage@gmail.com</p>
-      <p><i class="fas fa-map-marker-alt"></i> 22 novembre 67000, Strasbourg</p>
+      <p><i class="fas fa-envelope"></i> autismefamille@gmail.com</p>
+    
     </div>
   </div>
 
-  <!-- Mentions légales -->
+<!-- Mentions légales -->
   <div class="legal">
-    <a href="rgpd.html">Mentions légales</a>
+    <a href="mentionlegales.html">Mentions légales</a>
   </div>
-</footer>
+ </footer>
 
 </body>
 </html>

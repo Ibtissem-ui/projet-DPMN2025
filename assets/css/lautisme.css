@@ -1,0 +1,356 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Playfair Display',serif;
+  background: linear-gradient(to bottom, #e9f1f7, #d0e1f9);
+  color: #013652;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #013652;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.header-content {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+}
+
+/* Conteneur des cartes */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Carte */
+.box {
+  flex: 1 1 calc(33.333% - 2rem); /* 3 par ligne avec l'espace */
+  max-width: calc(33.333% - 2rem);
+  height: 25rem;
+  border: 0.5rem solid #013652;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Element caché au survol */
+.element {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #013652, #0077);
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  transition: top 0.4s ease;
+}
+
+.box:hover .element {
+  top: 0;
+}
+
+.element h3 {
+  font-size: 2rem;
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.element p {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #0b5788;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Bouton retour */
+.retour {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+ 
+}
+.btn-retour {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-retour:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  background-color: #013652;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-column ul li a:hover {
+  color: #ffcc00;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+.footer-column button {
+  margin-top: 15px;
+  background-color: #fff;
+  color: #0b5788;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.footer-column button:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.legal {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+.legal a {
+  color: #fff;
+  text-decoration: none;
+}
+.legal a:hover {
+  text-decoration: underline;
+}
+/*Mode gris */
+.graymode {
+  filter: grayscale(100%);
+}
+
+
+
+/* Responsive  */
+
+@media (max-width: 1024px) {
+  .header-content {
+    font-size: 2.2rem;
+  }
+
+  .box {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header-content {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .box {
+    flex: 1 1 100%;
+    max-width: 90vw;
+  }
+
+  .element h2 {
+    font-size: 1.8rem;
+  }
+
+  .element p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
