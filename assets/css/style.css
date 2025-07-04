@@ -142,13 +142,13 @@ header {
 /* Menu des paramètres caché par défaut */
 .acces-settings {
   position:sticky;
-  top: 70%;
+  top: 50%;
   right: 20px; /* espace du bord droit */
   z-index:999;
 }
 
 .acces-settings #openSettings {
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   color: gold;
 }
