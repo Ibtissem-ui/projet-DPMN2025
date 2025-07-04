@@ -143,14 +143,16 @@ header {
 .acces-settings {
   position:sticky;
   top: 50%;
-  right: 20px; /* espace du bord droit */
   z-index:999;
+ 
 }
 
 .acces-settings #openSettings {
   font-size: 2rem;
   cursor: pointer;
   color: gold;
+  padding: 15px;
+  
 }
 .settings-menu {
   position: absolute; 
@@ -166,7 +168,10 @@ header {
   font-size: 14px;
   font-family: 'Playfair Display', serif;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  border: 1px solid gold; 
+  border: 1px solid gold;
+  left: 15px;
+  
+ 
 }     
 
 /* Quand le menu est actif */
@@ -590,10 +595,10 @@ footer {
 /* Card */
 .card {
   background: #ffffff;
-  padding: 25px 30px;
+  padding: 20px 25px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 90, 135, 0.1);
-  max-width: 500px;
+  max-width: 300px;
   width: 100%;
   position: relative;
   transition: all 0.3s ease;
@@ -800,7 +805,7 @@ footer {
   button.next {
     font-size: 16px;
     padding: 8px;
-    bottom: 50px;
+    bottom: 100px;
   }
 
   button.prev {
@@ -859,7 +864,7 @@ footer {
     width: 100vw;
     background:linear-gradient(to right,#013652,#0077);
     display: none;
-    z-index: 998;
+    z-index: 999;
     overflow-y: auto;
     height: 700px;
   }
@@ -933,7 +938,7 @@ footer {
   button.next {
     font-size: 16px;
     padding: 8px;
-    bottom: 40px;
+    bottom: 100px;
   }
 
   button.prev {
