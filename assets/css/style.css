@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Montserrat/Montserrat-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
 
 *{
   box-sizing: border-box;
@@ -16,7 +21,6 @@ header {
   left: 0;
   width: 100%;
   justify-content: space-between;
-  /* align-items: center; */
   z-index: 999;
   padding:10px 30px;
   background: #013652 ;
@@ -138,31 +142,28 @@ header {
 /* Menu des paramètres caché par défaut */
 .acces-settings {
   position:sticky;
-  top: 50%;
+  top: 70%;
   right: 20px; /* espace du bord droit */
-  z-index: 1000;
+  z-index:999;
 }
 
 .acces-settings #openSettings {
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   color: gold;
 }
 .settings-menu {
   position: absolute; 
   bottom: 100px;  /*menu au-dessus de l’icône */ 
-  right: auto; 
   opacity: 0; 
   transform: translateY(10px);  /*commence un peu plus bas  */
-  pointer-events: none; 
   visibility: hidden; 
   background-color: rgba(15, 87, 164, 0.622); 
   padding: 15px 15px 10px; 
   border-radius: 12px; 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  width: 300px; 
-  font-size: 16px;
+  width: 200px; 
+  font-size: 14px;
   font-family: 'Playfair Display', serif;
   transition: opacity 0.3s ease, transform 0.3s ease;
   border: 1px solid gold; 
@@ -178,11 +179,11 @@ header {
 
 /* Bouton de fermeture */
 .settings-menu .close-btn {
-  display: flex; 
+  /* display: flex;  */
   position: absolute; 
   top: 10px; 
   left: 25px; 
-  font-size: 18px; 
+  /* font-size: 18px;  */
   cursor: pointer; 
   color: #fff; 
   transition: color 0.2s ease; 
@@ -198,20 +199,20 @@ header {
   display: block;
   height: 1px;
   background-color: #ccc;
-  margin: 50px 0 20px; /* espace entre le bouton close et le menu */
+  margin: 30px 0 20px; /* espace entre le bouton close et le menu */
 }
 
 /* Style des boutons */
 .settings-menu button {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
   width: 100%;
-  padding: 10px 12px;
+  padding: 5px 5px;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Playfair Display', serif;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -223,13 +224,13 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid #ddd;
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   flex-shrink: 0;
 } 
 
@@ -376,7 +377,6 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0,0,139,0.4);
-
   z-index: 1;
 }
 
@@ -420,7 +420,6 @@ header {
 button.prev,
 button.next {
   position: absolute;
- 
   bottom: 80px;
   z-index: 3;
   background-color: #013652;
@@ -448,7 +447,8 @@ button.prev {
   padding: 10px 20px;
   text-decoration: none;
   margin-top: 15px;
-  border-radius: 20px; 
+  border-radius: 20px;
+  font-family: 'Montserrat'; 
 } 
 /*section event*/
 
@@ -457,7 +457,7 @@ button.prev {
   overflow: hidden;
   padding: 60px 20px;
   background-color: #f5faff;
-  font-family: 'Playfair Display, serif';
+  font-family: 'open sans', sans-serif;
 }
 .corner {
   position: absolute;
@@ -485,7 +485,7 @@ footer {
   background-color: #013652 ;
   color: #fff;
   padding: 40px 20px 20px;
-  font-family:Playfair Display, serif;
+  font-family:'Playfair Display', serif;
   position: relative;
 }
 
