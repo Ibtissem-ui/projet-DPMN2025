@@ -7,8 +7,7 @@
 
 body {
 
-
-  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #f4f8fb;
   color: #333;
   line-height: 1.6; 
@@ -139,7 +138,7 @@ footer {
   background-color: #013652;
   color: #fff;
   padding: 40px 20px 20px;
-  font-family: 'Playfair Display', serif;
+  
   position: relative;
 }
 .footer-container {
