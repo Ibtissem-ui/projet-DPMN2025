@@ -55,7 +55,7 @@ h2::after {
   display: flex;
   align-items: center;
   gap:15px;
-  padding:10px
+  padding:10px;
 
 }
 
@@ -85,8 +85,8 @@ h2::after {
 
 /* LISTE DES OBJECTIFS */
 ul {
+  
   list-style: none;
-  padding-left: 0;
   margin-bottom: 30px;
 }
 
@@ -212,6 +212,110 @@ footer {
 
 
 /*responsive*/
+@media (max-width: 1024px){
+
+  header {
+    font-size: 24px;
+    padding: 20px 10px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-text p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+  
+  }
+  .about-image img {
+  
+    max-width: 400px;
+    height: 200px;
+
+  }
+
+  ul li {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .message {
+    font-size: 18px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-retour {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+   footer {
+    padding: 30px 15px 15px;
+  }
+
+  .footer-container {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .footer-column {
+    flex: 1 1 220px;
+    min-width: 180px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+  }
+
+  .footer-column ul li a {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .legal {
+    font-size: 13px;
+    margin-top: 25px;
+  }
+}
+ 
+  .social-icons a {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+
+  .legal {
+    font-size: 12px;
+  }
+
 
 @media (max-width: 768px) {
     
@@ -263,13 +367,10 @@ footer {
 
   .footer-container {
     flex-direction: column;
-    align-items: center;
+     
   }
 
-  .footer-column {
-    text-align: center;
-  }
-
+ 
   .social-icons a {
     font-size: 18px;
     margin: 0 5px;
