@@ -144,9 +144,7 @@ header {
   position:sticky;
   top: 50%;
   z-index:999;
- 
 }
-
 .acces-settings #openSettings {
   font-size: 2rem;
   cursor: pointer;
@@ -598,10 +596,11 @@ footer {
   padding: 20px 25px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 90, 135, 0.1);
-  max-width: 350px;
-  /* width: 100%; */
+  width: 350px;
   position: relative;
   transition: all 0.3s ease;
+  min-height: 300px;
+  
   
 }
 
