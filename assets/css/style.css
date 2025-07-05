@@ -279,6 +279,7 @@ header {
 }
 /* formulaire-connexion*/
   .formulaire-connexion {
+  font-family: 'Open Sans', sans-serif;  
   display: none;
   position: fixed;
   top: 20%;
@@ -292,6 +293,7 @@ header {
   border:2px solid gold 
 } 
 .formulaire-connexion h3 {
+   
   text-align: center;
   color: #fff;
   margin-bottom: 25px;
