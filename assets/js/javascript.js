@@ -76,7 +76,7 @@ function ajouterSujet(titre, email, message) {
  
 // إضافة الأحداث: تقييم، مشاركة، ردود
 function ajouterFonctionnalites(post) {
-  // التقييم بالنجوم
+  // étoiles
   const stars = post.querySelectorAll(".star");
   stars.forEach(star => {
     star.addEventListener("click", () => {

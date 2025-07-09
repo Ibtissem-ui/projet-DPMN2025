@@ -34,9 +34,14 @@ header {
 }
 
 /* Carte */
+.box-container {
+ display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 1.5rem;
+  padding: 1rem;
+}
 .box {
-  flex: 1 1 calc(33.333% - 2rem); /* 3 par ligne avec l'espace */
-  max-width: calc(33.333% - 2rem);
+  max-width: 100%; /* plus besoin de flex ni de max-width spécifique */
   height: 25rem;
   border: 0.5rem solid #013652;
   border-radius: 0.5rem;
@@ -44,13 +49,6 @@ header {
   position: relative;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
-
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Element caché au survol */
 .element {
   position: absolute;

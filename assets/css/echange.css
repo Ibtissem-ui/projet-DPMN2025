@@ -115,12 +115,8 @@ form label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+}
  
-}
-h3{
-  text-align: center;
-
-}
 form input,
 form textarea {
   width: 100%;
