@@ -677,10 +677,11 @@ footer {
 
 
 @media (max-width: 1024px) {
-
- body {
-    padding-top: 60px;
-  }
+  body {
+   margin:0;
+   padding: 0;
+}
+ 
  header {
     flex-direction: row;
     justify-content: space-between;
@@ -813,8 +814,9 @@ footer {
 
 @media (max-width: 768px) {
 
- body {
-    padding-top: 60px;
+  body {
+  margin: 0;
+  padding: 0;
   }
  header {
     flex-direction: row;
