@@ -50,10 +50,12 @@ h2::after {
 }
 
 .about-section {
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding:20px;
+  gap:15px;
 
 }
 .about-text {

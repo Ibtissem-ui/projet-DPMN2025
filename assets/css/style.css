@@ -757,22 +757,6 @@ footer {
     text-align: center;
   }
 
-
- 
-
-.submenu.active {
-  display: block;
-}
-
-
-
- 
-  
-
-
-
-
-
 /*formulaire de conx*/
   .formulaire-connexion {
     width: 80%;
@@ -821,7 +805,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
 
  header {
     flex-direction: row;
@@ -881,15 +864,6 @@ footer {
     border-radius: 0;
   }
 
-
-
-.submenu.active {
-  display: block;
-}
-
-
-
-
 /*formulaire de conx*/
 .formulaire-connexion {
     width: 90%;
@@ -917,7 +891,7 @@ footer {
     font-size: 0.9rem;
   }
   .content {
-    bottom: 30%;
+    bottom: 25%;
     left: 5%;
     padding: 0 10px;
     text-align: left;
