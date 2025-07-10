@@ -95,30 +95,26 @@ header {
   color: #fff;
   white-space: nowrap;
 }
-
 .navbar .submenu li a:hover {
   background-color: #0373b0;
 }
 
 /* Affiche le sous-menu au survol */
-.navbar .has-submenu:hover .submenu {
+.submenu {
+  display: none;
+}
+
+.submenu.active {
   display: block;
 }
+
 /*pour les fléches*/
 .submenu i {
   font-size: 20px;
   margin-right: 10px;
   color:gold; 
 }
-.submenu {
-  display: none;
-  list-style: none;
-  padding-left: 20px;
-}
 
-.submenu.active {
-  display: block;
-}
 .icons{
   display: flex;
   justify-content:center;
@@ -677,17 +673,14 @@ footer {
 
 
 @media (max-width: 1024px) {
-  body {
-   margin:0;
-   padding: 0;
-}
+
  
  header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 18px 18px;
-    height: 60px;
+    height: 65px;
     position: fixed;
     width: 100vw;
     z-index: 999;
@@ -765,6 +758,21 @@ footer {
   }
 
 
+ 
+
+.submenu.active {
+  display: block;
+}
+
+
+
+ 
+  
+
+
+
+
+
 /*formulaire de conx*/
   .formulaire-connexion {
     width: 80%;
@@ -795,7 +803,7 @@ footer {
   button.next {
     font-size: 16px;
     padding: 8px;
-    bottom: 200px;
+    bottom: 100px;
   }
 
   button.prev {
@@ -814,16 +822,13 @@ footer {
 
 @media (max-width: 768px) {
 
-  body {
-  margin: 0;
-  padding: 0;
-  }
+
  header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 18px 18px;
-    height: 60px;
+    height: 65px;
     position: fixed;
     width: 100vw;
     z-index: 999;
@@ -835,12 +840,6 @@ footer {
     margin-left: 0;
   }
 
-  .logo {
-    text-align: center;
-    margin: 0;
-    font-size: 18px;
-    line-height: 1;
-  }
  .icons {
     justify-content: flex-end;
     width: auto;
@@ -881,11 +880,15 @@ footer {
     font-size: 1em;
     border-radius: 0;
   }
-.logo{
-    font-size: 16px;
-    flex: 1;
-    text-align: center;
-  }
+
+
+
+.submenu.active {
+  display: block;
+}
+
+
+
 
 /*formulaire de conx*/
 .formulaire-connexion {

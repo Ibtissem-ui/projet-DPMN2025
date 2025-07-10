@@ -153,15 +153,40 @@ function ajouterFonctionnalites(post) {
 
 /*le submenu*/
 
+
+// Sélectionner le lien "À propos"
 const toggleSubmenu = document.getElementById('toggle-submenu');
+
+// Sélectionner le sous-menu
 const submenu = document.querySelector('.submenu');
-if (toggleSubmenu && submenu) {
+
+// Quand on clique sur le lien "À propos"
+toggleSubmenu.addEventListener('click', function(e) {
+    e.preventDefault(); // empêcher le lien de naviguer
+    submenu.classList.toggle('active'); // ouvrir ou fermer le menu
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const toggleSubmenu = document.getElementById('toggle-submenu');
+// const submenu = document.querySelector('.submenu');
+// if (toggleSubmenu && submenu) {
   // Ouvre/ferme le sous-menu au clic
-  toggleSubmenu.addEventListener('click', function(e) {
-    e.preventDefault();
-    submenu.classList.toggle('active');
-  });
-}
+//   toggleSubmenu.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     submenu.classList.toggle('active');
+//   });
+// }
 
 /*les places event*/
     const forms = document.querySelectorAll('.event-form');

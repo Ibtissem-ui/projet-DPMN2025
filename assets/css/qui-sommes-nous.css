@@ -1,7 +1,7 @@
  
 * {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -29,12 +29,11 @@ header{
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
-  border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 64, 128, 0.1);
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 30px;
   color: #0077cc;
   margin-bottom: 20px;
   position: relative;
@@ -53,18 +52,17 @@ h2::after {
 .about-section {
   display: flex;
   align-items: center;
-  gap:15px;
-  padding:10px;
+  justify-content: center;
+  padding:20px;
 
 }
-
 .about-text {
   flex: 1 1 30%;
   color: #444;
 }
 
 .about-text p {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
   text-align: justify;
 }
@@ -72,19 +70,18 @@ h2::after {
 .about-image {
   flex: 1 1 20%;
   text-align: right;
-   width: 100px;
+ 
 
 }
 
-.about_image img {
- 
+.about-image img {
+ max-width: 100%;
   height: auto;
   box-shadow: 0 0 15px rgba(0, 119, 204, 0.2);
 }
 
 /* LISTE DES OBJECTIFS */
 ul {
-  
   list-style: none;
   margin-bottom: 30px;
 }
@@ -212,12 +209,10 @@ footer {
 
 /*responsive*/
 @media (max-width: 1024px){
-
-  header {
-    font-size: 24px;
-    padding: 20px 10px;
+ header {
+    font-size: 26px;
+    padding: 20px;
     text-align: center;
-    flex-direction: column;
   }
 
   .container {
@@ -225,31 +220,35 @@ footer {
   }
 
   .about-section {
-    flex-direction: column;
+    flex-direction: row; /* on garde row */
+    flex-wrap: wrap;     /* permet de mieux gérer les espaces */
+    gap: 10px;
     align-items: center;
-    gap: 20px;
-    text-align: center;
+    justify-content: center;
+    padding:10px;
   }
 
   .about-text {
-    flex: 1 1 100%;
+    flex: 1 1 60%;
+    font-size: 16px;
   }
 
   .about-text p {
-    font-size: 18px;
-    text-align: center;
+    font-size: 16px;
+    text-align: justify;
   }
 
   .about-image {
-    display: flex;
-    justify-content: center;
-  
+    flex: 1 1 40%;
+    text-align: center;
+    padding-right: 20px; /* espace interne */
+    box-sizing: border-box; /* s'assurer que le padding est pris en compte dans la largeur */
   }
-  .about-image img {
-  
-    max-width: 400px;
-    height: 200px;
 
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
   }
 
   ul li {
@@ -259,68 +258,46 @@ footer {
 
   .message {
     font-size: 18px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 15px;
   }
 
   .btn-retour {
     font-size: 16px;
     padding: 10px 20px;
-    margin: 0 auto;
-  }
-   footer {
-    padding: 30px 15px 15px;
   }
 
   .footer-container {
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    gap: 20px;
-    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
   .footer-column {
-    flex: 1 1 220px;
-    min-width: 180px;
+    flex: 1 1 45%;
+    min-width: 250px;
+    text-align: left;
   }
 
-  .footer-column h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    padding-bottom: 4px;
+  .footer-column ul li {
+    font-size: 14px;
   }
 
-  .footer-column ul li a {
-    font-size: 13px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
-    margin-right: 8px;
+  .social-icons {
+    text-align: center;
   }
 
   .legal {
     font-size: 13px;
-    margin-top: 25px;
+    padding-top: 15px;
   }
 }
- 
-  .social-icons a {
-    font-size: 18px;
-    margin: 0 5px;
-  }
-
-  .legal {
-    font-size: 12px;
-  }
-
+  
 
 @media (max-width: 768px) {
-    
+
   header {
-    font-size: 24px;
-    padding: 20px 10px;
+    font-size: 26px;
+    padding: 20px;
     text-align: center;
   }
 
@@ -329,54 +306,77 @@ footer {
   }
 
   .about-section {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 
-  .about-text,
-  .about-image {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .about-image img {
-    max-width: 100%;
-    height: auto;
+  .about-text {
+    flex: 1 1 60%;
+    font-size: 16px;
   }
 
   .about-text p {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .about-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   ul li {
-    font-size: 20px;
+    font-size: 18px;
+    padding-left: 20px;
   }
 
   .message {
-    font-size: 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    font-size: 16px;
+    padding: 10px;
   }
 
   .btn-retour {
     font-size: 16px;
-    padding: 10px 18px;
+    padding: 10px 20px;
   }
 
   .footer-container {
-    flex-direction: column;
-     
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
- 
-  .social-icons a {
-    font-size: 18px;
-    margin: 0 5px;
+  .footer-column {
+    flex: 1 1 45%;
+    min-width: 250px;
+    text-align: left;
   }
 
-  .footer-column button {
-    margin-top: 10px;
+  .footer-column ul li {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .legal {
+    font-size: 13px;
+    padding-top: 15px;
   }
 }
-

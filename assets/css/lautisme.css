@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,19 +20,8 @@ header {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 .header-content {
-
   font-size: 2.8rem;
 }
-
-/* Conteneur des cartes */
-.box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
 /* Carte */
 .box-container {
  display: grid;
@@ -192,114 +181,36 @@ footer {
 
 /* Responsive  */
 
-@media (max-width: 1024px) {
-  .header-content {
-    font-size: 2.2rem;
-  }
-
-  .box {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-footer {
-    padding: 30px 15px 15px;
-  }
-
-  .footer-container {
-    /* Toujours en flex row, pas de passage en colonne */
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    gap: 20px;
-    max-width: 100%;
-  }
-
-  .footer-column {
-    flex: 1 1 220px;
-    min-width: 180px;
-  }
-
-  .footer-column h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    padding-bottom: 4px;
-  }
-
-  .footer-column ul li a {
-    font-size: 13px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
-    margin-right: 8px;
-  }
-
-  .legal {
-    font-size: 13px;
-    margin-top: 25px;
+  @media (max-width: 1024px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
   }
 }
-  
 
 @media (max-width: 768px) {
+  .box-container {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+
   .header-content {
-    font-size: 1.8rem;
-    padding: 1rem;
+    font-size: 2rem; /* réduire la taille du titre */
   }
 
-  .box {
-    flex: 1 1 100%;
-    max-width: 90vw;
-  }
-
-  .element h2 {
-    font-size: 1.8rem;
-  }
-
-  .element p {
-    font-size: 1rem;
-  }
-
-  .btn {
+  .btn,
+  .btn-retour {
     font-size: 0.9rem;
-    padding: 8px 16px;
+    padding: 10px 18px;
   }
 
   .footer-container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .footer-column {
     width: 100%;
-    text-align: left;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
