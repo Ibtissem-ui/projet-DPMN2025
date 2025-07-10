@@ -415,7 +415,7 @@ header {
 button.prev,
 button.next {
   position: absolute;
-  bottom: 80px;
+  bottom: 50px;
   z-index: 3;
   background-color: #013652;
   color:#fff;

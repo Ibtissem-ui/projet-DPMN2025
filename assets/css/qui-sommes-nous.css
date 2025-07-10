@@ -81,6 +81,7 @@ h3::after {
  max-width: 100%;
   height: auto;
   box-shadow: 0 0 15px rgba(0, 119, 204, 0.2);
+  border-radius: 10px;
 }
 
 /* LISTE DES OBJECTIFS */
@@ -250,7 +251,7 @@ footer {
 
   .about-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: 300px;
   }
 
@@ -316,6 +317,7 @@ footer {
     max-width: 100%;
     object-fit: cover;
     display: block;
+
   }
 
   ul li {
@@ -347,10 +349,6 @@ footer {
 
   .footer-column ul li {
     font-size: 14px;
-  }
-
-  .social-icons {
-    text-align: center;
   }
 
   .legal {
