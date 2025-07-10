@@ -16,12 +16,13 @@ body {
 header{
   padding: 30px 20px;
   background: #013652;
-  color:white;
-  font-size: 32px;
+  color:white; 
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
+h2{
+  font-size: 32px;
 }
 
 .container {
@@ -32,14 +33,14 @@ header{
   box-shadow: 0 0 20px rgba(0, 64, 128, 0.1);
 }
 
-h2 {
+h3 {
   font-size: 30px;
   color: #0077cc;
   margin-bottom: 20px;
   position: relative;
 }
 
-h2::after {
+h3::after {
   content: "";
   width: 60px;
   height: 3px;
@@ -153,7 +154,7 @@ footer {
   min-width: 200px; 
 }
 
-.footer-column h3 {
+.footer-column h4 {
   margin-bottom: 15px;
   font-size: 18px;
   border-bottom: 2px solid #fff;
@@ -268,32 +269,7 @@ footer {
     padding: 10px 20px;
   }
 
-  .footer-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .footer-column {
-    flex: 1 1 45%;
-    min-width: 250px;
-    text-align: left;
-  }
-
-  .footer-column ul li {
-    font-size: 14px;
-  }
-
-  .social-icons {
-    text-align: center;
-  }
-
-  .legal {
-    font-size: 13px;
-    padding-top: 15px;
-  }
 }
-  
 
 @media (max-width: 768px) {
 
