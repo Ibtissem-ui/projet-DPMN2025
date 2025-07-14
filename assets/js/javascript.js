@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-// عناصر من الـ DOM
+// Fonction pour échapper les caractères HTML dangereux (sécurité XSS)
+function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, function(m) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    }[m];
+  });
+}
+
+// Les éléments DOM
 const openFormBtn = document.getElementById("OpenFormBtn");
 const sujetForm = document.getElementById("sujetForm");
 const postContainer = document.getElementById("postContainer");
@@ -10,13 +23,13 @@ const titreInput = document.getElementById("titre");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
  
-// فتح النموذج
+// ouvrir le formulaire 
 openFormBtn.addEventListener("click", () => {
   sujetForm.classList.toggle("hidden");
   successMessage.classList.add("hidden");
 });
  
-// عند إرسال النموذج
+// Lors de l'envoi du formulaire
 sujetForm.addEventListener("submit", (e) => {
   e.preventDefault();
  
@@ -38,25 +51,19 @@ if (titre && email && message) {
 
 });
  
-// وظيفة إنشاء موضوع جديد
+// Fonction de création d’un nouveau sujet
 function ajouterSujet(titre, email, message) {
   const post = document.createElement("div");
    const pseudo = "Utilisateur_" + Math.floor(Math.random() * 10000);
 
-  
- 
-  post.innerHTML = `
-    <h3 class="post-title">${titre}</h3>
-    <p class="post-message">${message}</p>
-
-
-   
-  <p class="post-email">Posté par : ${pseudo}</p>
+    post.innerHTML = `
+    <h3 class="post-title">${escapeHtml(titre)}</h3>
+    <p class="post-message">${escapeHtml(message)}</p>
+    <p class="post-email">Posté par : ${pseudo}</p>
     
  
     <div class="rating">
-      ${[1, 2, 3, 4, 5].map(n => `<span class="star" data-value="${n}">☆</span>`).join("")}
-    </div>
+      ${[1, 2, 3, 4, 5].map(n => `<span class="star" data-value="${n}">☆</span>`).join("")}</div>
  
     <button class="btn-reply">Répondre</button>
     <button class="btn-share">Partager</button>
@@ -68,13 +75,13 @@ function ajouterSujet(titre, email, message) {
     </div>
   `;
  
-  // إضافة الأحداث التفاعلية
+  //Ajout des événements interactifs 
   ajouterFonctionnalites(post);
  
   postContainer.prepend(post);
 }
  
-// إضافة الأحداث: تقييم، مشاركة، ردود
+//// Ajout des événements : évaluation, partage, réponses ».
 function ajouterFonctionnalites(post) {
   // étoiles
   const stars = post.querySelectorAll(".star");
@@ -90,7 +97,7 @@ function ajouterFonctionnalites(post) {
     });
   });
  
-  // زر "Partager"
+  // bouton "Partager"
   const shareBtn = post.querySelector(".btn-share");
   shareBtn.addEventListener("click", () => {
     const title = post.querySelector(".post-title").textContent;
@@ -113,7 +120,7 @@ function ajouterFonctionnalites(post) {
 
   });
  
-  // الردود
+  //Réponses
   const replyBtn = post.querySelector(".btn-reply");
   const replySection = post.querySelector(".reply-section");
   const sendReplyBtn = post.querySelector(".btn-send-reply");
@@ -141,7 +148,6 @@ function ajouterFonctionnalites(post) {
   if (localStorage.getItem("graymodeEnabled") === "true") {
     document.documentElement.classList.add("graymode");
   }
-
   const toggleButton = document.getElementById("toggleGraymode");
   if (toggleButton) {
     toggleButton.addEventListener("click", () => {
@@ -153,40 +159,16 @@ function ajouterFonctionnalites(post) {
 
 /*le submenu*/
 
-
 // Sélectionner le lien "À propos"
 const toggleSubmenu = document.getElementById('toggle-submenu');
-
 // Sélectionner le sous-menu
 const submenu = document.querySelector('.submenu');
-
 // Quand on clique sur le lien "À propos"
 toggleSubmenu.addEventListener('click', function(e) {
     e.preventDefault(); // empêcher le lien de naviguer
     submenu.classList.toggle('active'); // ouvrir ou fermer le menu
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-// const toggleSubmenu = document.getElementById('toggle-submenu');
-// const submenu = document.querySelector('.submenu');
-// if (toggleSubmenu && submenu) {
-  // Ouvre/ferme le sous-menu au clic
-//   toggleSubmenu.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     submenu.classList.toggle('active');
-//   });
-// }
 
 /*les places event*/
     const forms = document.querySelectorAll('.event-form');
@@ -245,26 +227,21 @@ const settingMenu = document.getElementById('settingMenu');
 openSettingsBtn.addEventListener('click', () => {
   settingMenu.classList.add('active');
 });
-
 closeSettingsBtn.addEventListener('click', () => {
   settingMenu.classList.remove('active');
 });
-
-
-  // استرجاع حجم الخط المحفوظ أو استخدم 100% كقيمة افتراضية
+//Récupérer la taille de police enregistrée ou utiliser 100 % comme valeur par défaut .
   let fontSize = localStorage.getItem("fontSize");
   fontSize = fontSize ? parseInt(fontSize) : 100;
-
-  // نطبّق الحجم كنسبة مئوية
+  //On applique la taille en pourcentage
   document.documentElement.style.fontSize = fontSize + "%";
-
-  // نبحث عن الأزرار (موجودة فقط في الصفحة الرئيسية)
+ //recherche les boutons dans la page d'accueil 
   const increaseBtn = document.getElementById("increaseFont");
   const decreaseBtn = document.getElementById("decreaseFont");
 
   if (increaseBtn) {
     increaseBtn.addEventListener("click", () => {
-      fontSize += 10; // تكبير بنسبة 10%
+      fontSize += 10;// Agrandir de 10 % 
       document.documentElement.style.fontSize = fontSize + "%";
       localStorage.setItem("fontSize", fontSize);
     });
@@ -272,7 +249,7 @@ closeSettingsBtn.addEventListener('click', () => {
 
   if (decreaseBtn) {
     decreaseBtn.addEventListener("click", () => {
-      fontSize = Math.max(50, fontSize - 10); // لا يقل عن 50%
+      fontSize = Math.max(50, fontSize - 10);// Pas moins de 50 %
       document.documentElement.style.fontSize = fontSize + "%";
       localStorage.setItem("fontSize", fontSize);
     });

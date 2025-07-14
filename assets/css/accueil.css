@@ -89,7 +89,6 @@ header {
   border-radius: 8px;
   z-index: 999;
 }
-
 .navbar .submenu li a {
   padding: 10px 15px;
   color: #fff;
@@ -98,23 +97,19 @@ header {
 .navbar .submenu li a:hover {
   background-color: #0373b0;
 }
-
 /* Affiche le sous-menu au survol */
 .submenu {
   display: none;
 }
-
 .submenu.active {
   display: block;
 }
-
 /*pour les fléches*/
 .submenu i {
   font-size: 20px;
   margin-right: 10px;
   color:gold; 
 }
-
 .icons{
   display: flex;
   justify-content:center;
@@ -140,8 +135,7 @@ header {
   font-size: 2rem;
   cursor: pointer;
   color: gold;
-  padding: 15px;
-  
+  padding: 15px;  
 }
 .settings-menu {
   position: absolute; 
@@ -158,11 +152,8 @@ header {
   font-family: 'Open Sans', sans-serif;
   transition: opacity 0.3s ease, transform 0.3s ease;
   border: 1px solid gold;
-  left: 15px;
-  
- 
+  left: 15px; 
 }     
-
 /* Quand le menu est actif */
 .settings-menu.active {
   opacity: 1;
@@ -501,23 +492,18 @@ button.prev {
   width: 350px;
   position: relative;
   transition: all 0.3s ease;
-  min-height: 300px;
-  
-  
+  min-height: 300px;  
 }
-
 .card h3 {
   color: #003e5c;
   font-size: 1.6em;
   margin-bottom: 10px;
 }
-
 .card p {
   color: #444;
   margin: 8px 0;
   font-size: 1em;
 }
-
 .card .Gratuit {
   color: #009688;
   font-weight: bold;
@@ -674,7 +660,6 @@ footer {
 
 @media (max-width: 1024px) {
 
- 
  header {
     flex-direction: row;
     justify-content: space-between;
@@ -685,7 +670,6 @@ footer {
     width: 100vw;
     z-index: 999;
   }
-
   #menu-bar {
     display: block;
     order: 1;
@@ -694,7 +678,6 @@ footer {
     cursor: pointer;
     font-size: 1.8rem;
   }
-
   .logo {
     order: 2;
     flex: 1 1 auto;
@@ -730,11 +713,9 @@ footer {
     transition: all 0.3s ease;
     max-height: 500px; /* réduit la hauteur pour écran plus petit */
   }
-
   .navbar.active {
     display: block;
   }
-
   .navbar .menu {
   
     flex-direction: column;

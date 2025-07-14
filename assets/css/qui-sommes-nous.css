@@ -218,11 +218,9 @@ footer {
     padding: 20px;
     text-align: center;
   }
-
   .container {
     padding: 20px;
   }
-
   .about-section {
     flex-direction: row; /* on garde row */
     flex-wrap: wrap;     /* permet de mieux gérer les espaces */
@@ -231,24 +229,20 @@ footer {
     justify-content: center;
     padding:10px;
   }
-
   .about-text {
     flex: 1 1 60%;
     font-size: 16px;
   }
-
   .about-text p {
     font-size: 16px;
     text-align: justify;
   }
-
   .about-image {
     flex: 1 1 40%;
     text-align: center;
     padding-right: 20px; /* espace interne */
     box-sizing: border-box; /* s'assurer que le padding est pris en compte dans la largeur */
   }
-
   .about-image img {
     width: 100%;
     max-width: 400px;
@@ -269,7 +263,6 @@ footer {
     font-size: 16px;
     padding: 10px 20px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -329,28 +322,23 @@ footer {
     font-size: 16px;
     padding: 10px;
   }
-
   .btn-retour {
     font-size: 16px;
     padding: 10px 20px;
   }
-
   .footer-container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
-
   .footer-column {
     flex: 1 1 45%;
     min-width: 250px;
     text-align: left;
   }
-
   .footer-column ul li {
     font-size: 14px;
   }
-
   .legal {
     font-size: 13px;
     padding-top: 15px;
