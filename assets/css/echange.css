@@ -354,6 +354,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
+
   .intro-container {
     flex-direction: column;
     gap: 15px;
@@ -422,6 +423,7 @@ footer {
 
 
   @media (max-width: 768px) {
+    
   body {
     font-size: 16px;
     margin: 0;
