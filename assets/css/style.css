@@ -84,7 +84,8 @@ header {
   left: 0;
   background-color: #02527f;
   list-style: none;
-  min-width: 150px;
+  min-width: 100px;
+  font-size: 20px;
   border-top:4px solid gold;
   border-radius: 8px;
   z-index: 999;
