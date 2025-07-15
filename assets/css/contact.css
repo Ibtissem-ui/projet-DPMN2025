@@ -132,7 +132,7 @@ form button:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem; /* espace entre le carré et le texte */
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -336,6 +336,22 @@ footer {
     padding: 0.7rem 1rem;
   }
   
+.checkbox-label {
+    font-size: 12px; 
+    gap: 0.4rem;     
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox-label a {
+    font-size: 12px; 
+  }
+
+
+
   /* Bouton retour accueil réduit */
   .btn-home {
     padding: 0.5rem 1rem;
