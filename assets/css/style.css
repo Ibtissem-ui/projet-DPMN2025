@@ -135,7 +135,8 @@ header {
   font-size: 2rem;
   cursor: pointer;
   color: gold;
-  padding: 15px;  
+  padding: 15px; 
+ 
 }
 .settings-menu {
   position: absolute; 
@@ -166,7 +167,7 @@ header {
 .settings-menu .close-btn {
   position: absolute; 
   top: 10px; 
-  left: 25px; 
+  right: 25px; 
   cursor: pointer; 
   color: #fff; 
   transition: color 0.2s ease; 
@@ -325,11 +326,11 @@ header {
 .formulaire-connexion p a:hover {
   text-decoration: underline;
 }
-.formulaire-connexion  #form-close{
+.formulaire-connexion #form-close{
   position:absolute;
-  top:2rem;
-  right: 3rem;
-  font-size: 1rem;
+  top:10px;
+  right: 10px;
+  font-size: 2rem;
   color: #fff;
   cursor:pointer;
 }
